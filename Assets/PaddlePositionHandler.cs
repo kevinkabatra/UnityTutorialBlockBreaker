@@ -7,8 +7,32 @@ public class PaddlePositionHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var mousePositionInUnits = Input.mousePosition.x / Screen.width * screenWidthInUnits;
-        var newPaddlePosition = new Vector2(mousePositionInUnits, transform.position.y);
+        var updatedPositionX = AdjustPositionToKeepPaddleOnScreen(GetMousePositionInUnits());
+        var newPaddlePosition = new Vector2(updatedPositionX, transform.position.y);
         transform.position = newPaddlePosition;
+    }
+
+    private float GetMousePositionInUnits()
+    {
+        var mousePosition = Input.mousePosition.x / Screen.width;
+        var mousePositionInUnits = mousePosition * screenWidthInUnits;
+        return mousePositionInUnits;
+    }
+
+    private float AdjustPositionToKeepPaddleOnScreen(float expectedPosition)
+    {
+        var worldUnitsToCenterPointOfSprite = GetWorldUnitsToCenterPointOfSprite();
+        var minimumPositionToKeepPaddleOnScreen = 0 + worldUnitsToCenterPointOfSprite;
+        var maximumPositionToKeepPaddleOnScreen = screenWidthInUnits - worldUnitsToCenterPointOfSprite;
+        var actualPosition = Mathf.Clamp(expectedPosition, minimumPositionToKeepPaddleOnScreen, maximumPositionToKeepPaddleOnScreen);
+        return actualPosition;
+    }
+
+    private float GetWorldUnitsToCenterPointOfSprite()
+    {
+        var spriteRenderer = GetComponent(nameof(SpriteRenderer)) as SpriteRenderer;
+        var sprite = spriteRenderer.sprite;
+        var worldUnitsToCenterPointOfSprite = sprite.rect.center.x / sprite.pixelsPerUnit;
+        return worldUnitsToCenterPointOfSprite;
     }
 }
