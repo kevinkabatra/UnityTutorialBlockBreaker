@@ -30,7 +30,7 @@ public class PaddlePositionHandler : MonoBehaviour
 
     private float GetWorldUnitsToCenterPointOfSprite()
     {
-        var spriteRenderer = GetComponent(nameof(SpriteRenderer)) as SpriteRenderer;
+        var spriteRenderer = GetComponent<SpriteRenderer>();
         var sprite = spriteRenderer.sprite;
         var worldUnitsToCenterPointOfSprite = sprite.rect.center.x / sprite.pixelsPerUnit;
         return worldUnitsToCenterPointOfSprite;
