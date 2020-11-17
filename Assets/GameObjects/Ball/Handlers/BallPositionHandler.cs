@@ -3,19 +3,19 @@
 public class BallPositionHandler : MonoBehaviour
 {
     [SerializeField] PaddleGameObject paddle;
-    [SerializeField] float ballLaunchSpeed = 10f;
 
+    private BallGameObject ball;
     private Vector2 paddleToBallVector;
-    private bool ballLaunched = false;
 
     void Start()
     {
+        ball = GetComponent<BallGameObject>();
         paddleToBallVector = GetPaddleToBallVector();
     }
 
     void Update()
     {
-        if(!ballLaunched)
+        if(!ball.hasLaunched)
         {
             KeepBallAttachedToPaddle();
             LaunchBallOnMouseClick();
@@ -28,9 +28,9 @@ public class BallPositionHandler : MonoBehaviour
         if (Input.GetMouseButtonDown(leftMouseButton))
         {
             var ballRigidBody = GetComponent<Rigidbody2D>();
-            ballRigidBody.velocity = new Vector2(0f, ballLaunchSpeed);
+            ballRigidBody.velocity = new Vector2(0f, ball.launchSpeed);
 
-            ballLaunched = true;
+            ball.hasLaunched = true;
         }
     }
 

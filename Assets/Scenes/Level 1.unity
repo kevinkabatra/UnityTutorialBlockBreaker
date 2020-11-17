@@ -614,6 +614,7 @@ GameObject:
   - component: {fileID: 743827323}
   - component: {fileID: 743827325}
   - component: {fileID: 743827326}
+  - component: {fileID: 743827327}
   m_Layer: 0
   m_Name: ball
   m_TagString: Untagged
@@ -748,7 +749,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 820903487}
-  ballLaunchSpeed: 10
+--- !u!114 &743827327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743827320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f218a6826dea1be4eb065e97df204d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasLaunched: 0
 --- !u!1 &820903481
 GameObject:
   m_ObjectHideFlags: 0

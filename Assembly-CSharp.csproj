@@ -63,6 +63,7 @@
     <Compile Include="Assets\GameObjects\Paddle\DataModel\PaddleGameObject.cs" />
     <Compile Include="Assets\GameObjects\Ball\Handlers\BallPositionHandler.cs" />
     <Compile Include="Assets\GameObjects\Block\DataModel\Block.cs" />
+    <Compile Include="Assets\GameObjects\Ball\DataModel\BallGameObject.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
