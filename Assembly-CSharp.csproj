@@ -57,12 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
-    <Compile Include="Assets\Scripts\Ball\Handlers\BallBounceLimiter.cs" />
-    <Compile Include="Assets\Scripts\Colliders\Handlers\LoseColliderTriggerHandler.cs" />
-    <Compile Include="Assets\Scripts\Paddle\Handlers\PaddlePositionHandler.cs" />
-    <Compile Include="Assets\Scripts\Paddle\DataModel\PaddleGameObject.cs" />
-    <Compile Include="Assets\Scripts\Ball\Handlers\BallPositionHandler.cs" />
-    <Compile Include="Assets\Scripts\Block\Block.cs" />
+    <Compile Include="Assets\GameObjects\Ball\Handlers\BallBounceLimiter.cs" />
+    <Compile Include="Assets\GameObjects\PlaySpace\Colliders\Handlers\LoseColliderTriggerHandler.cs" />
+    <Compile Include="Assets\GameObjects\Paddle\Handlers\PaddlePositionHandler.cs" />
+    <Compile Include="Assets\GameObjects\Paddle\DataModel\PaddleGameObject.cs" />
+    <Compile Include="Assets\GameObjects\Ball\Handlers\BallPositionHandler.cs" />
+    <Compile Include="Assets\GameObjects\Block\DataModel\Block.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
