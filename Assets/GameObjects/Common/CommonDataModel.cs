@@ -4,8 +4,11 @@ public class CommonDataModel : MonoBehaviour
 {
     protected BallGameObject ball;
 
+    private AudioSource audioSource;
+
     protected virtual void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         ball = FindObjectOfType<BallGameObject>();
     }
 
@@ -19,7 +22,6 @@ public class CommonDataModel : MonoBehaviour
 
     private void PlayAudio()
     {
-        var audioSource = GetComponent<AudioSource>();
         audioSource.Play();
     }
 }
