@@ -36,6 +36,10 @@ ToDo: Add proper comments for works used
 * Game Over
     * Creator: [Adam Weeden](https://freesound.org/people/AdamWeeden/)
     * Link: https://freesound.org/people/AdamWeeden/sounds/157218/
+* Blocks Breaking: 
+    * Creator: [yottasounds](https://freesound.org/people/yottasounds/)
+    * https://freesound.org/people/yottasounds/sounds/232137/
+* All other sounds. Any other sounds that have been included in this project were provided by the Unity course intructor.
 
 ## References and other content I found helpful
 1. Of course the Udemy class: https://www.udemy.com/course/unitycourse/.

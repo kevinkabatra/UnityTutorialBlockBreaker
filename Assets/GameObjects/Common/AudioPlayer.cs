@@ -2,7 +2,7 @@
 
 public class AudioPlayer : MonoBehaviour
 {
-    private AudioSource audioSource;
+    protected AudioSource audioSource;
 
     // Start is called before the first frame update
     protected virtual void Start()

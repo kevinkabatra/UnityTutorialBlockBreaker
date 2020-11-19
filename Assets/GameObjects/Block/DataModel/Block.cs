@@ -8,6 +8,7 @@ public class Block : CommonDataModel
 
     [SerializeField] private Sprite blockOneDamage;
     [SerializeField] private Sprite blockTwoDamage;
+    [SerializeField] private AudioClip blockDestroyedAudioClip;
 
     protected override void Start()
     {
@@ -34,10 +35,16 @@ public class Block : CommonDataModel
                 spriteRenderer.sprite = blockTwoDamage;
                 break;
             case 3:
-                Destroy(gameObject);
+                DestroyBlock();
                 break;
             default:
                 throw new NotImplementedException();
         }
+    }
+
+    private void DestroyBlock()
+    {
+        AudioSource.PlayClipAtPoint(blockDestroyedAudioClip, transform.position, 2f);
+        Destroy(gameObject);
     }
 }
