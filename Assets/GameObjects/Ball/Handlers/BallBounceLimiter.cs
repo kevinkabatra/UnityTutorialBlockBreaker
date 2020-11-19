@@ -57,23 +57,55 @@ public class BallBounceLimiter : MonoBehaviour
         // If velocity is equal to 0 the ball is going in a straight vertical line, and therefore its x value should not be adjusted.
         if (ballRigidBody.velocity.x != 0)
         {
-            // If ball is leaning right
+            var speedAdjustment = 0f;
+
+            // If ball is leaning rightt
             if (ballRigidBody.velocity.x > 0.5)
             {
+                var positiveMaxLeftRightSpeed = System.Math.Abs(ball.maxLeftRightSpeed);
                 var positiveSpeedToAdjustTo = System.Math.Abs(speedToAdjustTo);
-                if (ballRigidBody.velocity.x < positiveSpeedToAdjustTo)
+
+                if (ballRigidBody.velocity.x > positiveMaxLeftRightSpeed)
                 {
-                    ballRigidBody.velocity = new Vector2(positiveSpeedToAdjustTo, ballRigidBody.velocity.y);
+                    speedAdjustment = positiveMaxLeftRightSpeed;
+                }
+                else if (ballRigidBody.velocity.x < positiveSpeedToAdjustTo)
+                {
+                    speedAdjustment = positiveSpeedToAdjustTo;
+                }
+                else
+                {
+                    return;
                 }
             }
             // If ball is leaning left
             else if (ballRigidBody.velocity.x < -0.5)
             {
+                var negativeMaxLeftRightSpeed = System.Math.Abs(ball.maxLeftRightSpeed) * -1;
                 var negativeSpeedToAdjustTo = System.Math.Abs(speedToAdjustTo) * -1;
+
+                if (ballRigidBody.velocity.x < negativeMaxLeftRightSpeed)
+                {
+                    speedAdjustment = negativeMaxLeftRightSpeed;
+                }
+                else if (ballRigidBody.velocity.x < negativeSpeedToAdjustTo)
+                {
+                    speedAdjustment = negativeSpeedToAdjustTo;
+                }
+                else
+                {
+                    return;
+                }
+
                 if (ballRigidBody.velocity.x > negativeSpeedToAdjustTo)
                 {
                     ballRigidBody.velocity = new Vector2(negativeSpeedToAdjustTo, ballRigidBody.velocity.y);
                 }
+            }
+
+            if (speedAdjustment != 0f)
+            {
+                ballRigidBody.velocity = new Vector2(speedAdjustment, ballRigidBody.velocity.y);
             }
         }
     }
@@ -85,44 +117,50 @@ public class BallBounceLimiter : MonoBehaviour
     /// <param name="speedToAdjustTo">The speed to adjust to.</param>
     private void AdjustBallSpeedHandlerForY(Rigidbody2D ballRigidBody, float speedToAdjustTo)
     {
+        var speedAdjustment = 0f;
+
         // If ball is heading upwards
         if (ballRigidBody.velocity.y > 0)
         {
-            float positiveSpeedToAdjustTo;
-            if(ballRigidBody.velocity.y > ball.maxSpeed)
+            var positiveMaxUpwardSpeed = System.Math.Abs(ball.maxUpwardSpeed);
+            var positiveSpeedToAdjustTo = System.Math.Abs(speedToAdjustTo);
+
+            if (ballRigidBody.velocity.y > positiveMaxUpwardSpeed)
             {
-                positiveSpeedToAdjustTo = System.Math.Abs(ball.maxSpeed);
+                speedAdjustment = System.Math.Abs(positiveMaxUpwardSpeed);
             }
-            else if (ballRigidBody.velocity.y < speedToAdjustTo)
+            else if (ballRigidBody.velocity.y < positiveSpeedToAdjustTo)
             {
-                positiveSpeedToAdjustTo = System.Math.Abs(speedToAdjustTo);
+                speedAdjustment = System.Math.Abs(positiveSpeedToAdjustTo);
             }
             else
             {
                 return;
-            }
-            
-            ballRigidBody.velocity = new Vector2(ballRigidBody.velocity.x, positiveSpeedToAdjustTo);
+            }                        
         }
-
         // If ball is heading downwards
         else if (ballRigidBody.velocity.y < 0)
         {
-            float negativeSpeedToAdjustTo;
-            if(ballRigidBody.velocity.y < ball.maxSpeed)
+            var negativeMaxDownwardSpeed = System.Math.Abs(ball.maxDownwardSpeed) * -1;
+            var negativeSpeedToAdjustTo = System.Math.Abs(speedToAdjustTo) * -1;
+
+            if(ballRigidBody.velocity.y < negativeMaxDownwardSpeed)
             {
-                negativeSpeedToAdjustTo = System.Math.Abs(ball.maxSpeed) * -1;
+                speedAdjustment = negativeMaxDownwardSpeed;
             }
-            else if(ballRigidBody.velocity.y > speedToAdjustTo)
+            else if(ballRigidBody.velocity.y > negativeSpeedToAdjustTo)
             {
-                negativeSpeedToAdjustTo = System.Math.Abs(speedToAdjustTo) * -1;
+                speedAdjustment = negativeSpeedToAdjustTo;
             }
             else
             {
                 return;
             }
-            
-            ballRigidBody.velocity = new Vector2(ballRigidBody.velocity.x, negativeSpeedToAdjustTo);
+        }
+
+        if(speedAdjustment != 0f)
+        {
+            ballRigidBody.velocity = new Vector2(ballRigidBody.velocity.x, speedAdjustment);
         }
     }
 }
