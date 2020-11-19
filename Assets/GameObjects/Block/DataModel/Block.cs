@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Block : MonoBehaviour
+public class Block : CommonDataModel
 {
     private int damageLevel = 0;
     SpriteRenderer spriteRenderer;
@@ -9,13 +9,15 @@ public class Block : MonoBehaviour
     [SerializeField] private Sprite blockOneDamage;
     [SerializeField] private Sprite blockTwoDamage;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();    
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
+        base.OnCollisionEnter2D(collision);
         HandleDamage();
     }
 

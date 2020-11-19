@@ -56,14 +56,15 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\GameObjects\Scripting\SceneLoader\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\GameObjects\Ball\Handlers\BallBounceLimiter.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Colliders\Handlers\LoseColliderTriggerHandler.cs" />
+    <Compile Include="Assets\GameObjects\Ball\DataModel\BallGameObject.cs" />
     <Compile Include="Assets\GameObjects\Paddle\Handlers\PaddlePositionHandler.cs" />
+    <Compile Include="Assets\GameObjects\Block\DataModel\Block.cs" />
     <Compile Include="Assets\GameObjects\Paddle\DataModel\PaddleGameObject.cs" />
     <Compile Include="Assets\GameObjects\Ball\Handlers\BallPositionHandler.cs" />
-    <Compile Include="Assets\GameObjects\Block\DataModel\Block.cs" />
-    <Compile Include="Assets\GameObjects\Ball\DataModel\BallGameObject.cs" />
+    <Compile Include="Assets\GameObjects\Common\CommonDataModel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

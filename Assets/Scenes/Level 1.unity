@@ -643,17 +643,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4961003022022754758, guid: 0a0dc3a3a8b6b3b458808942ed29aaf4, type: 3}
   m_PrefabInstance: {fileID: 4961003022833663997}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &820903487 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4961003022022754754, guid: 0a0dc3a3a8b6b3b458808942ed29aaf4, type: 3}
-  m_PrefabInstance: {fileID: 4961003022833663997}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98fccdf9b5e478d43a2f093f72b855b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &977751023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1038,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1012911597}
     m_Modifications:
+    - target: {fileID: 4961003022022754754, guid: 0a0dc3a3a8b6b3b458808942ed29aaf4, type: 3}
+      propertyPath: ball
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4961003022022754756, guid: 0a0dc3a3a8b6b3b458808942ed29aaf4, type: 3}
       propertyPath: m_Name
       value: Paddle
@@ -1099,6 +1092,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0dc3a3a8b6b3b458808942ed29aaf4, type: 3}
+--- !u!114 &4961003022833663998 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4961003022022754754, guid: 0a0dc3a3a8b6b3b458808942ed29aaf4, type: 3}
+  m_PrefabInstance: {fileID: 4961003022833663997}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fccdf9b5e478d43a2f093f72b855b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9161664883209367918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1109,7 +1113,7 @@ PrefabInstance:
     - target: {fileID: 9161664882868262416, guid: e39a4871c98136941bbd6d8f8c7d77f7, type: 3}
       propertyPath: paddle
       value: 
-      objectReference: {fileID: 820903487}
+      objectReference: {fileID: 4961003022833663998}
     - target: {fileID: 9161664882868262420, guid: e39a4871c98136941bbd6d8f8c7d77f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.98
