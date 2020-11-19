@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 
-public class CommonDataModel : MonoBehaviour
+public class CommonDataModel : AudioPlayer
 {
     protected BallGameObject ball;
 
-    private AudioSource audioSource;
-
-    protected virtual void Start()
+    protected new virtual void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        base.Start();
         ball = FindObjectOfType<BallGameObject>();
     }
 
@@ -18,10 +16,5 @@ public class CommonDataModel : MonoBehaviour
         {
             PlayAudio();
         }
-    }
-
-    private void PlayAudio()
-    {
-        audioSource.Play();
     }
 }
