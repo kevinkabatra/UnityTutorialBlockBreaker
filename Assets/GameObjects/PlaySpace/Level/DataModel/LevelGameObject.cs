@@ -14,8 +14,6 @@ public class LevelGameObject : MonoBehaviour
         {
             throw new NullReferenceException(nameof(sceneLoader));
         }
-
-        UpdateBlockCount();
     }
 
     public void UpdateBlockCount()
