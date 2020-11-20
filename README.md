@@ -19,6 +19,10 @@ I also once again demonstrate concepts that have been shown in previous exercise
 ### Artwork
 As I am focusing only on programming I decided that I should find some open source images to create my "game art". In my previous tutorial I mentioned that I had found [Open Game Art](https://opengameart.org), which is a site that offers just that. The artwork in this tutorial will once again come from artists who share their hard-work on that site, and this document will give appropriate credit to those artists.
 
+#### Heart
+Author: https://opengameart.org/users/mart
+Link: https://opengameart.org/content/heart-2
+
 #### Background Image
 All elements of the background, and the backgrounds themselves come courtesy of [Kenney.nl](http://donate.kenney.nl/). Here is the [link](https://opengameart.org/content/background-elements) to his work that I pulled from Open Game Art. His work was released under a [CCO](https://creativecommons.org/licenses/by/3.0/) license, so I want to thank him for that and give him the proper credit.
 

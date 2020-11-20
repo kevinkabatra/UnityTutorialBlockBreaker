@@ -50,6 +50,8 @@ public class Block : CommonDataModel
         AudioSource.PlayClipAtPoint(blockDestroyedAudioClip, transform.position, 2f);
         Destroy(gameObject);
         isDestroyed = true;
+        
+        level.AddPointsToScore();
         level.UpdateBlockCount();
     }
 }

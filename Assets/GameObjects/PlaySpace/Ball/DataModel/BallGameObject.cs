@@ -7,5 +7,5 @@ public class BallGameObject : MonoBehaviour
     public readonly float maxDownwardSpeed = 10f;
     public readonly float maxLeftRightSpeed = 10f;
 
-    public bool hasLaunched = false;    
+    public bool hasLaunched = false;
 }

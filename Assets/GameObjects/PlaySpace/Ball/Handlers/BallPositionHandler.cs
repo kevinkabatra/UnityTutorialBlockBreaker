@@ -13,6 +13,11 @@ public class BallPositionHandler : MonoBehaviour
         paddleToBallVector = GetPaddleToBallVector();
     }
 
+    public void ResetBall()
+    {
+        ball.hasLaunched = false;  
+    }
+
     void Update()
     {
         if(!ball.hasLaunched)
