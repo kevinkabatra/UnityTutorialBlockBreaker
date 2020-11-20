@@ -12,7 +12,6 @@ public class Block : CommonDataModel
     [SerializeField] private Sprite blockTwoDamage;
     [SerializeField] private AudioClip blockDestroyedAudioClip;
 
-
     protected override void Start()
     {
         base.Start();
@@ -51,7 +50,7 @@ public class Block : CommonDataModel
         Destroy(gameObject);
         isDestroyed = true;
         
-        level.AddPointsToScore();
+        level.playerScore.AddPointsToScore();
         level.UpdateBlockCount();
     }
 }
