@@ -66,6 +66,8 @@
     <Compile Include="Assets\GameObjects\PlaySpace\Ball\Handlers\BallPositionHandler.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Common\CommonDataModel.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Common\AudioPlayer.cs" />
+    <Compile Include="Assets\GameObjects\PlaySpace\Block\Handlers\BlockCounter.cs" />
+    <Compile Include="Assets\GameObjects\PlaySpace\Level\DataModel\LevelGameObject.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

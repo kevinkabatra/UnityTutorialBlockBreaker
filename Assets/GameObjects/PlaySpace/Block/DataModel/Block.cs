@@ -3,12 +3,15 @@ using UnityEngine;
 
 public class Block : CommonDataModel
 {
+    public bool isDestroyed = false;
+
     private int damageLevel = 0;
     SpriteRenderer spriteRenderer;
 
     [SerializeField] private Sprite blockOneDamage;
     [SerializeField] private Sprite blockTwoDamage;
     [SerializeField] private AudioClip blockDestroyedAudioClip;
+
 
     protected override void Start()
     {
@@ -46,5 +49,7 @@ public class Block : CommonDataModel
     {
         AudioSource.PlayClipAtPoint(blockDestroyedAudioClip, transform.position, 2f);
         Destroy(gameObject);
+        isDestroyed = true;
+        level.UpdateBlockCount();
     }
 }
