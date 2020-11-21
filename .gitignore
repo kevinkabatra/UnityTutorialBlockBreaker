@@ -11,3 +11,7 @@
 /[Uu]ser[Ss]ettings/
 /Assets/TextMesh Pro/
 *.suo
+/.vs
+*/bin
+*/obj/
+Assets/References/

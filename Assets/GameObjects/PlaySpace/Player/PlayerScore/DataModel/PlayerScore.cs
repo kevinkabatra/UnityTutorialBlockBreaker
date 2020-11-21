@@ -1,24 +1,26 @@
-﻿using System;
+﻿using BlockBreaker.Logic.Player.PlayerScore;
 using TMPro;
 using UnityEngine;
 
-public class PlayerScore : MonoBehaviour
+public class PlayerScore : MonoBehaviour, IPlayerScore
 {
     [SerializeField] private TextMeshProUGUI playerScoreDisplay;
 
-    private int score;
+    private IPlayerScore playerScoreLogic;
 
     private void Start()
     {
-        if (playerScoreDisplay == null)
-        {
-            throw new NullReferenceException(nameof(playerScoreDisplay));
-        }
+        playerScoreLogic = new BlockBreaker.Logic.Player.PlayerScore.PlayerScore();    
     }
 
-    public void AddPointsToScore(int points = 1)
+    public void AddToScore(int points = 1)
     {
-        score += points;
-        playerScoreDisplay.text = score.ToString();
+        playerScoreLogic.AddToScore(points);
+        playerScoreDisplay.text = GetScore().ToString();
+    }
+
+    public int GetScore()
+    {
+        return playerScoreLogic.GetScore();
     }
 }
