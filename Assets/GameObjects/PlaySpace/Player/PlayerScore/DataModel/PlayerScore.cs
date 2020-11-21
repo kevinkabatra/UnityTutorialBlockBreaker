@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-public class PlayerScore : MonoBehaviour, IPlayerScore
+public class PlayerScore : Singleton<PlayerScore>, IPlayerScore
 {
     [SerializeField] private TextMeshProUGUI playerScoreDisplay;
 

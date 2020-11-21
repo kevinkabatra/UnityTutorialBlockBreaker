@@ -70,6 +70,7 @@
     <Compile Include="Assets\GameObjects\PlaySpace\Level\DataModel\LevelGameObject.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Player\PlayerHealth\DataModel\PlayerHealth.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Player\PlayerScore\DataModel\PlayerScore.cs" />
+    <Compile Include="Assets\GameObjects\PlaySpace\Common\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\References\Kabatra.Common.Singleton.dll" />
