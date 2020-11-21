@@ -156,7 +156,6 @@ Transform:
   - {fileID: 1145664499}
   - {fileID: 1012911597}
   - {fileID: 602051750}
-  - {fileID: 1152263897}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -172,8 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f17641c644eef40bdc749f860d5005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1183531631}
-  playerScore: {fileID: 1260891183}
+  player: {fileID: 1152263898}
   sceneLoader: {fileID: 2528688133736025063, guid: 35041600e4284954b8da0c528fea0c45, type: 3}
 --- !u!1 &70155155
 GameObject:
@@ -1184,6 +1182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1152263897}
+  - component: {fileID: 1152263898}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1198,15 +1197,30 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152263896}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1183531630}
-  - {fileID: 1260891182}
-  m_Father: {fileID: 53204853}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1152263898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152263896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8da110bc64dff468f75c4a8eceb8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthHeartOne: {fileID: 564081214}
+  playerHealthHeartTwo: {fileID: 1327812384}
+  playerHealthHeartThree: {fileID: 1537583208}
+  playerScoreDisplay: {fileID: 106223735}
 --- !u!1 &1160992909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,7 +1287,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1183531630}
-  - component: {fileID: 1183531631}
   m_Layer: 0
   m_Name: PlayerHealth
   m_TagString: Untagged
@@ -1298,65 +1311,6 @@ Transform:
   m_Father: {fileID: 1152263897}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1183531631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183531629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef4e53384d1dacd4985454e20a5ede4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealthHeartOne: {fileID: 564081214}
-  playerHealthHeartTwo: {fileID: 1327812384}
-  playerHealthHeartThree: {fileID: 1537583208}
---- !u!1 &1260891181
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1260891182}
-  - component: {fileID: 1260891183}
-  m_Layer: 0
-  m_Name: PlayerScore
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1260891182
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260891181}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1152263897}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1260891183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260891181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2282b8b70e491641ab500428a4deb9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScoreDisplay: {fileID: 106223735}
 --- !u!1001 &1327812382
 PrefabInstance:
   m_ObjectHideFlags: 0

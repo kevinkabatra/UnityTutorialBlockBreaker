@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class LevelGameObject : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
-    public PlayerScore playerScore;
+    public Player player;
 
     [SerializeField] private SceneLoader sceneLoader;
     
@@ -18,15 +17,10 @@ public class LevelGameObject : MonoBehaviour
             throw new NullReferenceException(nameof(sceneLoader));
         }
 
-        if(playerHealth == null)
+        if(player == null)
         {
-            throw new NullReferenceException(nameof(playerHealth));
+            throw new NullReferenceException(nameof(player));
         }
-
-        if(playerScore == null)
-        {
-            throw new NullReferenceException(nameof(playerScore));
-        }    
     }
 
     public void UpdateBlockCount()

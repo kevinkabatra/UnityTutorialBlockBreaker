@@ -68,9 +68,8 @@
     <Compile Include="Assets\GameObjects\PlaySpace\Common\AudioPlayer.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Block\Handlers\BlockCounter.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Level\DataModel\LevelGameObject.cs" />
-    <Compile Include="Assets\GameObjects\PlaySpace\Player\PlayerHealth\DataModel\PlayerHealth.cs" />
-    <Compile Include="Assets\GameObjects\PlaySpace\Player\PlayerScore\DataModel\PlayerScore.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Common\Singleton.cs" />
+    <Compile Include="Assets\GameObjects\PlaySpace\Player\DataModel\Player.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\References\Kabatra.Common.Singleton.dll" />

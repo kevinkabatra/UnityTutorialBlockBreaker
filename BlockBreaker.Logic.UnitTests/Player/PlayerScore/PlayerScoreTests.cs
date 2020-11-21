@@ -1,9 +1,10 @@
 ﻿namespace BlockBreaker.Logic.UnitTests.Player.PlayerScore
 {
     using BlockBreaker.Logic.Player.PlayerScore;
+    using BlockBreaker.Logic.UnitTests.Common;
     using Xunit;
 
-    public class PlayerScoreTests
+    public class PlayerScoreTests : SingletonTester<PlayerScore>
     {
         [Fact]
         public void CanAddToScore()

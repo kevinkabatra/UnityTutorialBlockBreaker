@@ -50,7 +50,7 @@ public class Block : CommonDataModel
         Destroy(gameObject);
         isDestroyed = true;
         
-        level.playerScore.AddToScore();
+        level.player.AddToScore();
         level.UpdateBlockCount();
     }
 }

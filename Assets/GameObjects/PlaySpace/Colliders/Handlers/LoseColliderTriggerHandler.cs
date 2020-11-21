@@ -11,6 +11,6 @@ public class LoseColliderTriggerHandler : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D collision)
     {
-        level.playerHealth.HandleDamage();
+        level.player.AddDamage();
     }
 }
