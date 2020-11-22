@@ -16,6 +16,18 @@ public class Player : Singleton<Player>, IPlayerHealth, IPlayerScore
     private BallPositionHandler ball;
     private Logic playerLogic;
 
+    public static Player Get()
+    {
+        var player = FindObjectOfType<Player>();
+        if (player == null)
+        {
+            var errorMessage = string.Format("Cannot find {0}", nameof(player));
+            throw new NullReferenceException(errorMessage);
+        }
+
+        return player;
+    }
+
     private void InitializeForStart()
     {
         ResetHealth();
@@ -25,13 +37,7 @@ public class Player : Singleton<Player>, IPlayerHealth, IPlayerScore
     private void InitializeForNewLevel()
     {
         playerLogic = Logic.GetOrCreateInstance();
-
-        level = FindObjectOfType<LevelGameObject>();
-        if(level == null)
-        {
-            var errorMessage = string.Format("Cannot find {0} for {1}", nameof(level), nameof(Player));
-            throw new NullReferenceException(errorMessage);
-        }
+        level = LevelGameObject.GetLevel();
 
         ball = FindObjectOfType<BallPositionHandler>();
         if (ball == null)
@@ -44,13 +50,7 @@ public class Player : Singleton<Player>, IPlayerHealth, IPlayerScore
     {
         level.sceneLoader.AddListenerForStartGameEvent(() => { Logic.Reset(); });
         level.sceneLoader.AddListenerForStartGameEvent(() => { InitializeForStart(); });
-        level.sceneLoader.AddListenerForStartGameEvent(() => { DebugHelloWorld(); });
         level.sceneLoader.AddListenerForNextSceneEvent(() => { InitializeForNewLevel(); });
-    }
-
-    private void DebugHelloWorld()
-    {
-        Debug.Log("Hello world");
     }
 
     // Start is called before the first frame update

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,18 @@ public class SceneLoader : Singleton<SceneLoader>
     public void AddListenerForNextSceneEvent(UnityAction callBackFunction)
     {
         nextSceneEvent.AddListener(callBackFunction);
+    }
+
+    public static SceneLoader GetSceneLoader()
+    {
+        var sceneLoader = FindObjectOfType<SceneLoader>();
+        if(sceneLoader == null)
+        {
+            var errorMessage = string.Format("Cannot find {0}", nameof(sceneLoader));
+            throw new NullReferenceException(errorMessage);
+        }
+
+        return sceneLoader;
     }
 
     /// <summary>
@@ -58,11 +71,5 @@ public class SceneLoader : Singleton<SceneLoader>
     public void QuitGame()
     {
         Application.Quit();
-    }
-
-    private void Start()
-    {
-        //startGameEvent = new UnityEvent();
-        //nextSceneEvent = new UnityEvent();
     }
 }

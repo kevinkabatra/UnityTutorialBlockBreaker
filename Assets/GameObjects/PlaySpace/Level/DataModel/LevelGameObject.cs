@@ -8,18 +8,16 @@ public class LevelGameObject : MonoBehaviour
     
     private int currentBlockCount;
 
-    // Start is called before the first frame update
-    void Start()
+    public static LevelGameObject GetLevel()
     {
-        if(sceneLoader == null)
+        var level = FindObjectOfType<LevelGameObject>();
+        if (level == null)
         {
-            throw new NullReferenceException(nameof(sceneLoader));
+            var errorMessage = string.Format("Cannot find {0}", nameof(level));
+            throw new NullReferenceException(errorMessage);
         }
-
-        if(player == null)
-        {
-            throw new NullReferenceException(nameof(player));
-        }
+        
+        return level;
     }
 
     public void UpdateBlockCount()
@@ -33,6 +31,21 @@ public class LevelGameObject : MonoBehaviour
         if(currentBlockCount == 0)
         {
             sceneLoader.LoadNextScene();
+        }
+    }
+
+    // Start is called before the first frame update
+    private void Start()
+    {
+        if (sceneLoader == null)
+        {
+            throw new NullReferenceException(nameof(sceneLoader));
+        }
+
+        player = Player.Get();
+        if (player == null)
+        {
+            throw new NullReferenceException(nameof(player));
         }
     }
 }
