@@ -4,8 +4,7 @@ using UnityEngine;
 public class LevelGameObject : MonoBehaviour
 {
     public Player player;
-
-    [SerializeField] private SceneLoader sceneLoader;
+    public SceneLoader sceneLoader;
     
     private int currentBlockCount;
 

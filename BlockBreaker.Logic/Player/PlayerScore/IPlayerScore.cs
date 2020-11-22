@@ -16,5 +16,10 @@
         /// </summary>
         /// <returns></returns>
         int GetScore();
+
+        /// <summary>
+        ///     Resets the score to 0.
+        /// </summary>
+        void ResetScore();
     }
 }

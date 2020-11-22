@@ -1,8 +1,22 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class SceneLoader : MonoBehaviour 
+public class SceneLoader : Singleton<SceneLoader> 
 {
+    private UnityEvent startGameEvent = new UnityEvent();
+    private UnityEvent nextSceneEvent = new UnityEvent();
+
+    public void AddListenerForStartGameEvent(UnityAction callBackFunction)
+    {
+        startGameEvent.AddListener(callBackFunction);
+    }
+
+    public void AddListenerForNextSceneEvent(UnityAction callBackFunction)
+    {
+        nextSceneEvent.AddListener(callBackFunction);
+    }
+
     /// <summary>
     ///     Loads the next scene.
     /// </summary>
@@ -10,6 +24,8 @@ public class SceneLoader : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
+        
+        nextSceneEvent.Invoke();
     }
     
     /// <summary>
@@ -29,6 +45,8 @@ public class SceneLoader : MonoBehaviour
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
+        
+        startGameEvent.Invoke();
     }
 
     /// <summary>
@@ -40,5 +58,11 @@ public class SceneLoader : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    private void Start()
+    {
+        //startGameEvent = new UnityEvent();
+        //nextSceneEvent = new UnityEvent();
     }
 }

@@ -30,5 +30,16 @@
 
             Assert.Equal(updatedScore, initialScore + pointsToAdd);
         }
+
+        [Fact]
+        public void CanResetPlayerScore()
+        {
+            var playerScore = PlayerScore.GetOrCreateInstance();
+            playerScore.AddToScore();
+            playerScore.ResetScore();
+
+            var zeroScore = playerScore.GetScore();
+            Assert.Equal(0, zeroScore);
+        }
     }
 }

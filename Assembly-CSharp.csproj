@@ -57,19 +57,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GameObjects\Scripting\SceneLoader\Scripts\SceneLoader.cs" />
+    <Compile Include="Assets\GameObjects\PlaySpace\Player\DataModel\Player.cs" />
+    <Compile Include="Assets\GameObjects\PlaySpace\Common\Singleton.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Ball\Handlers\BallBounceLimiter.cs" />
+    <Compile Include="Assets\GameObjects\PlaySpace\Level\DataModel\LevelGameObject.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Colliders\Handlers\LoseColliderTriggerHandler.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Ball\DataModel\BallGameObject.cs" />
+    <Compile Include="Assets\GameObjects\PlaySpace\Block\Handlers\BlockCounter.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Paddle\Handlers\PaddlePositionHandler.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Block\DataModel\Block.cs" />
+    <Compile Include="Assets\GameObjects\PlaySpace\Common\CommonDataModel.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Paddle\DataModel\PaddleGameObject.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Ball\Handlers\BallPositionHandler.cs" />
-    <Compile Include="Assets\GameObjects\PlaySpace\Common\CommonDataModel.cs" />
     <Compile Include="Assets\GameObjects\PlaySpace\Common\AudioPlayer.cs" />
-    <Compile Include="Assets\GameObjects\PlaySpace\Block\Handlers\BlockCounter.cs" />
-    <Compile Include="Assets\GameObjects\PlaySpace\Level\DataModel\LevelGameObject.cs" />
-    <Compile Include="Assets\GameObjects\PlaySpace\Common\Singleton.cs" />
-    <Compile Include="Assets\GameObjects\PlaySpace\Player\DataModel\Player.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\References\Kabatra.Common.Singleton.dll" />
@@ -284,11 +284,11 @@
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.11f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Kabatra.Common.Singleton">
-      <HintPath>Assets\References\Kabatra.Common.Singleton.dll</HintPath>
-    </Reference>
     <Reference Include="BlockBreaker.Logic">
       <HintPath>Assets\References\BlockBreaker.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="Kabatra.Common.Singleton">
+      <HintPath>Assets\References\Kabatra.Common.Singleton.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.11f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

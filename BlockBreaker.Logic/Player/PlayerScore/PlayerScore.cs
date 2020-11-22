@@ -18,5 +18,11 @@
         {
             return score;
         }
+
+        /// <inheritdoc/>
+        public void ResetScore()
+        {
+            score = 0;
+        }
     }
 }

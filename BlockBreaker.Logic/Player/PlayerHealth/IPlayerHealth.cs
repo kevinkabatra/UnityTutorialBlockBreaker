@@ -15,6 +15,11 @@
         ///     Returns the player's health.
         /// </summary>
         /// <returns></returns>
-        int GetPlayerHealth();
+        int GetHealth();
+
+        /// <summary>
+        ///     Resets the player's health to its original value.
+        /// </summary>
+        void ResetHealth();
     }
 }
