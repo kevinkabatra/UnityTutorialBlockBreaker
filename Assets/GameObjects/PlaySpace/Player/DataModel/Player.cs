@@ -48,7 +48,7 @@ public class Player : Singleton<Player>, IPlayerHealth, IPlayerScore
 
     private void SetupListeners()
     {
-        level.sceneLoader.AddListenerForStartGameEvent(() => { Logic.Reset(); });
+        //level.sceneLoader.AddListenerForStartGameEvent(() => { Logic.Reset(); });
         level.sceneLoader.AddListenerForStartGameEvent(() => { InitializeForStart(); });
         level.sceneLoader.AddListenerForNextSceneEvent(() => { InitializeForNewLevel(); });
     }
