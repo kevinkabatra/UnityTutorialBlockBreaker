@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B673CBF3-9144-4F0F-B8B9-41716440C694}</ProjectGuid>
+    <ProjectGuid>{363D3D3E-F811-B056-54AD-B7E4C5A91968}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>PlayMode</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -56,45 +56,10 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GameLogic\SceneLoader\Scripts\SceneLoader.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Player\DataModel\Player.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Common\Singleton.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Ball\Handlers\BallBounceLimiter.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Level\DataModel\LevelGameObject.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Colliders\Handlers\LoseColliderTriggerHandler.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Ball\DataModel\BallGameObject.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Block\Handlers\BlockCounter.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Paddle\Handlers\PaddlePositionHandler.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Block\DataModel\Block.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Common\CommonDataModel.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Paddle\DataModel\PaddleGameObject.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Ball\Handlers\BallPositionHandler.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Common\AudioPlayer.cs" />
+    <Compile Include="Assets\UnityTests\PlayMode\NewTestScript.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\References\Kabatra.Common.Singleton.dll" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\References\BlockBreaker.Logic.dll" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\UnityTests\PlayMode\BlockBreaker.PlayMode.Tests.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.11f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -283,12 +248,6 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.11f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="BlockBreaker.Logic">
-      <HintPath>Assets\References\BlockBreaker.Logic.dll</HintPath>
-    </Reference>
-    <Reference Include="Kabatra.Common.Singleton">
-      <HintPath>Assets\References\Kabatra.Common.Singleton.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.5\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -638,86 +597,17 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.11f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Triangle.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="PsdPlugin">
-      <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
