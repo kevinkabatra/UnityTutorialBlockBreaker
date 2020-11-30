@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{26FA1135-DAF3-2675-9336-B9E62324D0F0}</ProjectGuid>
+    <ProjectGuid>{81CD94C2-4B28-F798-0614-6190F3D98647}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnitTests.Utilities</AssemblyName>

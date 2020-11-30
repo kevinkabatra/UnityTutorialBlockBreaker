@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{19022C82-85CD-ECC8-C23B-01E08A8607B5}</ProjectGuid>
+    <ProjectGuid>{55D59FFC-B1BA-1612-F68E-31C62396CF4C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PlayMode.UnitTests</AssemblyName>
@@ -614,11 +614,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityLayer.csproj">
-      <Project>{BABE0107-E841-BE61-44F4-69910E30CB7C}</Project>
+      <Project>{E5E16A7A-12FD-48BC-9132-28F8475F1BD2}</Project>
       <Name>UnityLayer</Name>
     </ProjectReference>
     <ProjectReference Include="UnitTests.Utilities.csproj">
-      <Project>{26FA1135-DAF3-2675-9336-B9E62324D0F0}</Project>
+      <Project>{81CD94C2-4B28-F798-0614-6190F3D98647}</Project>
       <Name>UnitTests.Utilities</Name>
     </ProjectReference>
   </ItemGroup>

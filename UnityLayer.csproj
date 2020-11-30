@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BABE0107-E841-BE61-44F4-69910E30CB7C}</ProjectGuid>
+    <ProjectGuid>{E5E16A7A-12FD-48BC-9132-28F8475F1BD2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityLayer</AssemblyName>
