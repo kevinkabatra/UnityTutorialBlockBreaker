@@ -4,12 +4,16 @@
 
     public class PlayerHealth : SingletonBase<PlayerHealth>, IPlayerHealth
     {
-        private const int defaultPlayerHealth = 3;
+        private const int maxPlayerHealth = 15;
+        private int defaultPlayerHealth = 3;
         private int playerHealth;
 
+        /// <summary>
+        ///     Constructor.
+        /// </summary>
         public PlayerHealth()
         {
-            playerHealth = defaultPlayerHealth;
+            playerHealth =  defaultPlayerHealth;
         }
 
         /// <inheritdoc/>
@@ -19,13 +23,25 @@
         }
 
         /// <inheritdoc/>
-        public int GetHealth()
+        public int GetPlayerHealth()
         {
             return playerHealth;
         }
 
         /// <inheritdoc/>
-        public void ResetHealth()
+        public void IncreasePlayerHealth()
+        {
+            if((defaultPlayerHealth + 1) > maxPlayerHealth)
+            {
+                return;
+            }
+
+            defaultPlayerHealth++;
+            playerHealth = defaultPlayerHealth;
+        }
+
+        /// <inheritdoc/>
+        public void ResetPlayerHealth()
         {
             playerHealth = defaultPlayerHealth;
         }

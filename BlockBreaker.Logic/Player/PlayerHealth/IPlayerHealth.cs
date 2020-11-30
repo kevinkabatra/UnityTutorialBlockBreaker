@@ -15,11 +15,16 @@
         ///     Returns the player's health.
         /// </summary>
         /// <returns></returns>
-        int GetHealth();
+        int GetPlayerHealth();
 
         /// <summary>
-        ///     Resets the player's health to its original value.
+        ///     Increases the player's health up to the hard coded max.
         /// </summary>
-        void ResetHealth();
+        void IncreasePlayerHealth();
+
+        /// <summary>
+        ///     Resets the player's health to the default value.
+        /// </summary>
+        void ResetPlayerHealth();
     }
 }

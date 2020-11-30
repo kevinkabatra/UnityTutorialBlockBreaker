@@ -10,7 +10,7 @@
         public void CanGetPlayerHealth()
         {
             var playerHealth = PlayerHealth.GetOrCreateInstance();
-            var healthValue = playerHealth.GetHealth();
+            var healthValue = playerHealth.GetPlayerHealth();
 
             Assert.NotEqual(0, healthValue);
         }
@@ -19,10 +19,10 @@
         public void CanAddDamage()
         {
             var playerHealth = PlayerHealth.GetOrCreateInstance();
-            var originalHealthValue = playerHealth.GetHealth();
+            var originalHealthValue = playerHealth.GetPlayerHealth();
 
             playerHealth.AddDamage();
-            var updatedHealthValue = playerHealth.GetHealth();
+            var updatedHealthValue = playerHealth.GetPlayerHealth();
 
             Assert.Equal(updatedHealthValue, originalHealthValue - 1);
         }
@@ -31,25 +31,37 @@
         public void CanAddSpecifiedDamage()
         {
             var playerHealth = PlayerHealth.GetOrCreateInstance();
-            var originalHealthValue = playerHealth.GetHealth();
+            var originalHealthValue = playerHealth.GetPlayerHealth();
 
             var damageToAdd = 2;
             playerHealth.AddDamage(damageToAdd);
-            var updatedHealthValue = playerHealth.GetHealth();
+            var updatedHealthValue = playerHealth.GetPlayerHealth();
 
             Assert.Equal(updatedHealthValue, originalHealthValue - damageToAdd);
         }
 
         [Fact]
-        public void CanResetPlayerHealth()
+        public void CanIncreasePlayerHealth()
         {
             var playerHealth = PlayerHealth.GetOrCreateInstance();
-            var defaultPlayerHealth = playerHealth.GetHealth();
+            var originalHealthValue = playerHealth.GetPlayerHealth();
+            var expectedHealthValue = originalHealthValue + 1;
 
+            playerHealth.IncreasePlayerHealth();
+
+            Assert.Equal(expectedHealthValue, playerHealth.GetPlayerHealth());
+        }
+
+        [Fact]
+        public void CanResetHealth()
+        {
+            var playerHealth = PlayerHealth.GetOrCreateInstance();
+            var originalHealthValue = playerHealth.GetPlayerHealth();
+            
             playerHealth.AddDamage();
-            playerHealth.ResetHealth();
+            playerHealth.ResetPlayerHealth();
 
-            Assert.Equal(defaultPlayerHealth, playerHealth.GetHealth());
+            Assert.Equal(originalHealthValue, playerHealth.GetPlayerHealth());
         }
     }
 }

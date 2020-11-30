@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B673CBF3-9144-4F0F-B8B9-41716440C694}</ProjectGuid>
+    <ProjectGuid>{7B9B71C2-23E1-A7FA-AE98-999BA2FC03B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,45 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GameLogic\SceneLoader\Scripts\SceneLoader.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Player\DataModel\Player.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Common\Singleton.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Ball\Handlers\BallBounceLimiter.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Level\DataModel\LevelGameObject.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Colliders\Handlers\LoseColliderTriggerHandler.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Ball\DataModel\BallGameObject.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Block\Handlers\BlockCounter.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Paddle\Handlers\PaddlePositionHandler.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Block\DataModel\Block.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Common\CommonDataModel.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Paddle\DataModel\PaddleGameObject.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Ball\Handlers\BallPositionHandler.cs" />
-    <Compile Include="Assets\GameLogic\PlaySpace\Common\AudioPlayer.cs" />
+    <Compile Include="Assets\Resources\PlaySpace\Buttons\StartButton.cs" />
+    <Compile Include="Assets\Resources\PlaySpace\Buttons\QuitButton.cs" />
+    <Compile Include="Assets\Resources\PlaySpace\Buttons\Button.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\References\Kabatra.Common.Singleton.dll" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\References\BlockBreaker.Logic.dll" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.11f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -289,9 +257,6 @@
     </Reference>
     <Reference Include="Kabatra.Common.Singleton">
       <HintPath>Assets\References\Kabatra.Common.Singleton.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.5\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.11f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -721,6 +686,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityLayer.csproj">
+      <Project>{BABE0107-E841-BE61-44F4-69910E30CB7C}</Project>
+      <Name>UnityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnitTests.Utilities.csproj">
+      <Project>{26FA1135-DAF3-2675-9336-B9E62324D0F0}</Project>
+      <Name>UnitTests.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
