@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{363D3D3E-F811-B056-54AD-B7E4C5A91968}</ProjectGuid>
+    <ProjectGuid>{55816D8D-ABCC-C1D1-4377-BD9B7745BCA4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PlayMode</AssemblyName>
@@ -56,10 +56,10 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\UnityTests\PlayMode\NewTestScript.cs" />
+    <Compile Include="Assets\UnitTests\PlayMode\PlaySpace\Blocks\BlockTests.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\UnityTests\PlayMode\BlockBreaker.PlayMode.Tests.asmdef" />
+     <None Include="Assets\UnitTests\PlayMode\PlayMode.UnitTests.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.11f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -250,7 +250,7 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.11f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.5\net35\unity-custom\nunit.framework.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.11f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -611,6 +611,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="PresentationLayer.csproj">
+      <Project>{6ECB550A-D8A7-7532-B82D-660BC9E30F0F}</Project>
+      <Name>PresentationLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -32,14 +32,17 @@
         }
 
         [Fact]
-        public void CanResetPlayerScore()
+        public void CanResetScore()
         {
             var playerScore = PlayerScore.GetOrCreateInstance();
+            var initialScore = playerScore.GetScore();
+
             playerScore.AddToScore();
             playerScore.ResetScore();
 
-            var zeroScore = playerScore.GetScore();
-            Assert.Equal(0, zeroScore);
+            var resetScore = playerScore.GetScore();
+
+            Assert.Equal(initialScore, resetScore);
         }
     }
 }

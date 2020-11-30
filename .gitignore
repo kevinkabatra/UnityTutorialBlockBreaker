@@ -1,17 +1,16 @@
-# This .gitignore file should be placed at the root of your Unity project directory
-#
-# Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
-#
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
-/Assets/TextMesh Pro/
+/Library/
+/Logs/
 *.suo
-/.vs
-*/bin
+/bin/
+*/bin/
+/obj/
 */obj/
+/Temp/
+/.vs/
+
+# ignore all reference assemblies, these are published by building the related business logic project.
 Assets/References/
+
+# ignore all testing scenes, these are created by the Unity Testing Framework when running unit tests.
+InitTestScene*
+/WebGLBuild/

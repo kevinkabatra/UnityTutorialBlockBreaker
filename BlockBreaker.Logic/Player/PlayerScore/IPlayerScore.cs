@@ -18,7 +18,7 @@
         int GetScore();
 
         /// <summary>
-        ///     Resets the score to 0.
+        ///     Resets the score back to zero.
         /// </summary>
         void ResetScore();
     }
