@@ -53,6 +53,9 @@ I found a site similar to Open Game Art that focused on audio files, [FreeSound.
 * Blocks Breaking: 
     * Creator: [yottasounds](https://freesound.org/people/yottasounds/)
     * https://freesound.org/people/yottasounds/sounds/232137/
+* Explosion:
+    * Creator: http://apricot.blender.org/
+    * Link: https://opengameart.org/content/big-explosion
 * All other sounds. Any other sounds that have been included in this project were provided by the Unity course instructor.
 
 ## References and other content I found helpful
@@ -61,6 +64,7 @@ I found a site similar to Open Game Art that focused on audio files, [FreeSound.
 1. Because the Unity documentation for testing is so poor I had to find additional sources to help me understand how to properly implement that. I found a great tutorial [on an introduction to Unity unit testing](https://www.raywenderlich.com/9454-introduction-to-unity-unit-testing), takin this class fully explained everything that I needed to know to setup up Play Mode unit testing.
 1. In Unity 2020 there is an issue with hosting WebGL builds on Itch.io, I found that there is an issue with compression and decompression fallback. This [posting](https://forum.unity.com/threads/webgl-both-async-and-sync-fetching-of-the-wasm-failed-build-and-runs-works-fails-when-uploading.944400/?_ga=2.219423577.1505386112.1606324287-632776480.1605231597) helped me discover the fix for this.
 1. Tutorial on how to create animations using Sprites in Unity: https://learn.unity.com/tutorial/introduction-to-sprite-animations?signup=true#.
+1. How to destroy an animation object once it completes: https://answers.unity.com/questions/670860/delete-object-after-animation-2d.html.
 
 ## Further reading
 If you found this article interesting perhaps you would like to read how I:

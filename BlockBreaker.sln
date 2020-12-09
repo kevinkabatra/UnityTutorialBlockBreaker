@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30621.155
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLayer", "UnityLayer.csproj", "{E5E16A7A-12FD-48BC-9132-28F8475F1BD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayMode.UnitTests", "PlayMode.UnitTests.csproj", "{55D59FFC-B1BA-1612-F68E-31C62396CF4C}"
@@ -42,8 +40,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E32488D2-E327-49DC-968D-9D1DFAC1B97C}
 	EndGlobalSection
 EndGlobal
