@@ -33,6 +33,11 @@ This object was used to display the current health of the player.
 Author: https://opengameart.org/users/mart
 Link: https://opengameart.org/content/heart-2
 
+#### Explosion
+The explosion is used when Red Blocks are broken.
+Author: https://opengameart.org/users/cuzco
+Link: https://opengameart.org/content/explosion
+
 ### Audio
 I found a site similar to Open Game Art that focused on audio files, [FreeSound.org](https://freesound.org/). 
 
@@ -55,6 +60,7 @@ I found a site similar to Open Game Art that focused on audio files, [FreeSound.
 1. The Unity Docs, you can learn so much about programming going through documentation: https://docs.unity3d.com/Manual/index.html. Well so long as it is documented properly, I am looking at you Unity Testing Framework.
 1. Because the Unity documentation for testing is so poor I had to find additional sources to help me understand how to properly implement that. I found a great tutorial [on an introduction to Unity unit testing](https://www.raywenderlich.com/9454-introduction-to-unity-unit-testing), takin this class fully explained everything that I needed to know to setup up Play Mode unit testing.
 1. In Unity 2020 there is an issue with hosting WebGL builds on Itch.io, I found that there is an issue with compression and decompression fallback. This [posting](https://forum.unity.com/threads/webgl-both-async-and-sync-fetching-of-the-wasm-failed-build-and-runs-works-fails-when-uploading.944400/?_ga=2.219423577.1505386112.1606324287-632776480.1605231597) helped me discover the fix for this.
+1. Tutorial on how to create animations using Sprites in Unity: https://learn.unity.com/tutorial/introduction-to-sprite-animations?signup=true#.
 
 ## Further reading
 If you found this article interesting perhaps you would like to read how I:
