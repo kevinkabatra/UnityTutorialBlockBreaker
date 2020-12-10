@@ -28,6 +28,17 @@ Again as I am only focusing on programming and learning Unity I decided that I w
 ### Artwork
 All artwork that is not specifically called out below was provided by the instructor for this class. In my previous tutorial I mentioned that I had found [Open Game Art](https://opengameart.org), which is a site that offers just that. The artwork in this tutorial will once again come from artists who share their hard-work on that site, and this document will give appropriate credit to those artists.
 
+#### Background
+* Level 1: Mountain Level
+    * Creator: https://opengameart.org/users/ansimuz
+    * Link: https://opengameart.org/content/mountain-at-dusk-background
+* Level 2: Forest Level
+    * Creator: https://opengameart.org/users/ansimuz
+    * Link: https://opengameart.org/content/forest-background
+* Level 3: City Level
+    * Creator: https://opengameart.org/users/ansimuz
+    * Link: https://opengameart.org/content/industrial-parallax-background
+    
 #### Heart
 This object was used to display the current health of the player.
 Author: https://opengameart.org/users/mart
