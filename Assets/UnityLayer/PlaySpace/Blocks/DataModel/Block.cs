@@ -5,7 +5,8 @@ public class Block : AudioPlayer<Block>
 {
     public bool isDestroyed = false;
 
-    private readonly UnityEvent blockDestroyedEvent = new UnityEvent();
+    public readonly UnityEvent blockDestroyedEvent = new UnityEvent();
+
     private int damageLevel = 0;
     private Level level;
     private SpriteRenderer spriteRenderer;

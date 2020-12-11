@@ -76,6 +76,8 @@
     <Compile Include="Assets\UnityLayer\PlaySpace\Common\Singleton.cs" />
     <Compile Include="Assets\UnityLayer\PlaySpace\Buttons\ContinueButton.cs" />
     <Compile Include="Assets\UnityLayer\PlaySpace\Blocks\Handlers\BlockCounter.cs" />
+    <Compile Include="Assets\UnityLayer\PlaySpace\Explosion\DataModel\Explosion.cs" />
+    <Compile Include="Assets\UnityLayer\PlaySpace\Blocks\Handlers\BlockExplosionEventHandler.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\UnityLayer\UnityLayer.asmdef" />
